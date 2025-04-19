@@ -1,0 +1,112 @@
+:root {
+    --b1:rgb(255 255 255);
+    --c1:#123456;
+    --b2:black;
+}
+
+html {
+    color: var(--c1);
+    font-family: system-ui,'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--b1);
+}
+
+html,body,aliens,apps,.app {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+menubar {
+    background-color: rgb(255 254 254);
+    height: 66px;
+    position: absolute;
+    backdrop-filter: blur(0px);
+    z-index: 999999;
+    box-shadow: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+mg {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    height: 100%;
+    grid-gap: 11px;
+    margin: 0 11px;
+}
+
+mg i {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: center;
+    position: relative;
+
+}
+
+mg .a bt {
+    display: block;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    height: 16px;
+    opacity: 1;
+    background: transparent;
+    font-size: 7px;
+    letter-spacing: 0px;
+}
+
+mg .a {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+mg .a:active {
+    border-bottom: 3px solid black;
+}
+
+mg .a svg {
+    fill: var(--c1);
+    height: 27px;
+    width: 27px;
+}
+
+i > svg, svg {
+    margin: auto;
+}
+
+mg .a i {
+    margin-bottom: 11px;
+}
+
+svg {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+bt {
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
