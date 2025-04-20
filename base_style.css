@@ -1,7 +1,16 @@
 :root {
     --b1:rgb(255 255 255);
+    --bt: rgb(255 255 255 / 77%);
+    --bf: rgb(0 0 0 / 0);
     --c1:#123456;
     --b2:black;
+    --c2:#123456;
+    --bc: rgb(18 52 86 / 7%);
+    --aaa: linear-gradient(333deg, var(--a), var(--aa));
+    --a: #0353fd;
+    --aa: #011b78;
+    --aat: rgb(0 66 189 / 22%);
+    --b-t: rgb(255 255 255 / 77%);
 }
 
 html {
@@ -14,7 +23,7 @@ body {
     background-color: var(--b1);
 }
 
-html,body,aliens,apps,.app {
+html body,aliens,apps,.app {
     display: block;
     width: 100%;
     height: 100%;
@@ -93,6 +102,7 @@ mg .a svg {
 
 i > svg, svg {
     margin: auto;
+    height: 50px;
 }
 
 mg .a i {
@@ -103,10 +113,257 @@ svg {
     max-width: 100%;
     max-height: 100%;
     display: block;
+    fill: var(--c1);
 }
 
 bt {
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 2px;
+}
+
+
+
+/* page navigation css */
+
+screen {
+    display: none;
+    /* padding: 20px; */
+    font-size: 18px;
+  }
+  
+  screen.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+
+   
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+ 
+
+d {
+    display: block;
+}
+
+
+hm nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 68px;
+    transition: 3s;
+    /* background-color: black; */
+    position: sticky;
+}
+
+hm nav bg {
+    background: linear-gradient(180deg,var(--b1),var(--bt),var(--bf));
+    backdrop-filter: blur(44px);
+}
+
+hm nav n {
+    display: grid;
+    grid-template-columns: 99px auto 144px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    z-index: 3;
+}
+
+hm nav left {
+    display: grid;
+    grid-template-columns: 50px 35px 0px;
+    width: 100%;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 67%;
+    width: 100%;
+
+}
+
+n logo {
+    display: flex ;
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+}
+
+n logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+nav left srtb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+hm nav n centerr srch {
+    background: var(--bc);
+    height: 100%;
+    display: flex;
+    width: auto;
+    border-radius: 7px;
+    left: -26px;
+    position: absolute;
+    left: -52px;
+    right: -44px;
+}
+
+hm nav srch input {
+    height: 100%;
+    width: 76%;
+    border: none;
+    font-size: 1.111rem;
+    font-weight: bold;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 71px;
+}
+
+hm nav n centerr {
+    position: relative;
+    display: block;
+    height: 44px;
+    width: 100%;
+}
+
+input {
+    outline: none;
+}
+
+
+hm nav n right plus {
+    height: 88%;
+    width: 88%;
+}
+
+hm nav n right {
+    display: grid;
+    grid-template-columns: 0 0 44px 44px 0 55px;
+}
+
+hm nav n>right>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 100%;
+} 
+
+hm nav n right>*>i {
+    height: 55%;
+    width: 55%;
+}
+
+hm nav n right pf {
+    height: 44px;
+    width: 44px;
+}
+
+hm nav n right pf img {
+    height: 88%;
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+nav right aa:last-child {
+    width: 44px;
+    box-shadow: inset 0 0 0 2px var(--bc);
+    border-radius: 50%;
+} 
+
+d {
+    display: block;
+}
+
+
+statuses {
+    width: 100%;
+    display: flex;
+    overflow-y: auto;
+    margin: 11px 0;
+    position: relative;
+}
+
+statuses::-webkit-scrollbar {
+    display: none;
+}
+
+status:nth-child(1) {
+    margin-left: 11px;
+}
+
+statuses status {
+    display: block;
+    height: 80px;
+    width: 84px;
+    min-width: 70px;
+    min-height: 80px;
+    position: relative;
+    
+}
+
+statuses status hd > i  {
+    height: 40%;
+}
+
+statuses status>bd {
+    display: block;
+    width: 90%;
+    margin: auto;
+    font-size: 0.66rem;
+    text-align: center;
+    margin-top: 4px;
+    margin-right: 9px;
+}
+
+statuses status>hd {
+    background: var(--aaa);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+statuses status > hd svg {
+    fill:var(--b1)
+}
+
+statuses status > hd > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--b1);
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+cscs hd {
+    width: 100%;
+    height: 70%;
+    background-color: var(--b-t);
 }

@@ -1,0 +1,34 @@
+screen {
+  display: none;
+  padding: 20px;
+  font-size: 18px;
+}
+
+screen.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+nav {
+  background-color: #222;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
