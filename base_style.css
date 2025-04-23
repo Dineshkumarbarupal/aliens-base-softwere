@@ -11,6 +11,8 @@
     --aa: #011b78;
     --aat: rgb(0 66 189 / 22%);
     --b-t: rgb(255 255 255 / 77%);
+    --bor: rgb(63 63 63 / 30%);
+    --bc: rgb(18 52 86 / 7%);
 }
 
 html {
@@ -27,6 +29,7 @@ html body,aliens,apps,.app {
     display: block;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 bg {
@@ -43,7 +46,7 @@ bg {
 menubar {
     background-color: rgb(255 254 254);
     height: 66px;
-    position: absolute;
+    position: fixed;
     backdrop-filter: blur(0px);
     z-index: 999999;
     box-shadow: unset;
@@ -130,8 +133,20 @@ screen {
     display: none;
     /* padding: 20px; */
     font-size: 18px;
+   
   }
-  
+
+@media screen and (min-width:1020px) {
+    screen {
+        overflow: auto;
+    }
+    
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
   screen.active {
     display: block;
     animation: fadeIn 0.3s ease-in-out;
@@ -147,6 +162,7 @@ screen {
 
 d {
     display: block;
+    position: relative;
 }
 
 
@@ -159,6 +175,9 @@ hm nav {
     transition: 3s;
     /* background-color: black; */
     position: sticky;
+    top: 0;
+    z-index: 5;
+
 }
 
 hm nav bg {
@@ -303,6 +322,13 @@ statuses {
     position: relative;
 }
 
+@media screen and (min-width:1020px) {
+    statuses {
+        left: -66px;
+    }
+    
+}
+
 statuses::-webkit-scrollbar {
     display: none;
 }
@@ -314,8 +340,8 @@ status:nth-child(1) {
 statuses status {
     display: block;
     height: 80px;
-    width: 84px;
-    min-width: 70px;
+    width: 73px;
+    min-width: 73px;
     min-height: 80px;
     position: relative;
     
@@ -362,8 +388,413 @@ img {
     max-width: 100%;
 }
 
+ccdo bl {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+ccdo cscs {
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    height: 200px;
+    background-color: var(--bor);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--b1);
+    align-items: center;
+    overflow: hidden;
+}
+
+cscs p {
+    position: absolute;
+    font-size: 12px;
+    left: 12px;
+}
+
+cscs bd {
+    color: var(--b1);
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -14px;
+    background-color: var(--a);
+    border-radius: 50%;
+}
+
+bl hd {
+    display: block;
+}
+
 cscs hd {
     width: 100%;
     height: 70%;
     background-color: var(--b-t);
+}
+
+ccdo bl bd svg {
+    fill: var(--b1);
+}
+
+ccdo bl bd {
+    display: flex;
+    gap: 10px;
+    /* overflow:scroll; */
+}
+
+ccdo bl {
+    height: 100%;
+    
+}
+/* @media */
+
+ccdo bl {
+    width: auto;
+}
+
+@media screen and (min-width:1020px) {
+    ccdss {
+        width: 65%;
+        display: block;
+    }
+    
+}
+
+
+
+ccds bl hd {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    background: var(--a);
+    padding: 2px;
+}
+
+ccdo bl ccds {
+    border-radius: 10px;
+    position: relative;
+    width: 110px;
+    height: 200px;
+    background-color: var(--bor);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+ccds bl hd img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+ccds bd {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 11px;
+}
+
+
+ccdo ccds img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+ccdo ccds ft p {
+    color: var(--b1);
+    font-size: 12px;
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+}
+
+
+
+ccdds bl {
+    display: flex;
+    padding: 22px;
+    align-items: center;
+    background-color: var(--b1);
+    border-radius: 22px;
+    
+    margin: 11px;
+}
+@media screen  and (min-width:1020px){
+    ccdds {
+        display: block;
+        width: 65%;
+      
+    }
+
+    ccdds bl {
+        margin-left: 0;
+    }
+    
+}
+
+.reload-icon {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bc);
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+ccdds .reload-icon::before {
+    content: "↻";
+    font-size: 36px;
+    color: var(--a);
+    
+}
+
+ccdds .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+ccdds .subtile {
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+cpsto {
+    display: block;
+    position: relative;
+    max-width: 1100px;
+    margin-bottom :7px;
+    background: var(--bt);
+    border-radius: 10px;
+}
+
+@media screen and (min-width:1020px) {
+    cpsto {
+        width: 100%;
+
+    }
+    
+}
+/* 
+screen:last-child {
+    display: block;
+    overflow: hidden scroll;
+
+} */
+
+cpsto > bl pf {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    align-items: center;
+}
+
+cpsto > bl desc p {
+    font-size: 0.77em;
+}
+
+cpsto > bl > hd p {
+    margin: 7px 0;
+}
+
+
+
+cpsto > bl pf  i {
+    /* height: 44px;
+    width: 44px; */
+    border-radius: 55%;
+}  
+
+cpsto cpsts {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+cpsto > bl > hd {
+    display: block;
+    padding: 11px 15px;
+}
+
+name {
+    font-weight: 600;
+    display: block;
+}
+
+cpsto pf name>btn {
+    display: inline list-item;
+    color: var(--a);
+    margin-left: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 95ms;
+}
+
+cpsto pf time {
+    display: flex;
+    align-items: center;
+    font-size: 0.77em;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+cpsto pf spain {
+    display: list-item;
+    margin-left: 22px;
+    height: 11px;
+    width: 11px;
+}
+
+cpsto pf btn {
+    display: block;
+    height: 33px;
+    width: 33px;
+    justify-self: end;
+    padding: 7px;
+    border-radius: 55%;
+    place-content: center;
+}
+cpsto > bl > bd {
+    display: block;
+    border-top: 1px solid #e8e0e0;
+    border-bottom: 1px solid #e8e0e0;
+    max-height: 66vh;
+    min-height: 66vh;
+    border-left: 0px;
+    border-right: 0px;
+    overflow: hidden;
+}
+
+cpsto bl ft {
+    display: block;
+    height: 150px;
+}
+
+cpsto > bl act {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88em;
+    font-weight: 400;
+    padding: 6px 15px;
+}
+
+cpsto bl ft act svg {
+    height: 20px;
+}
+
+cpsto bl ft d {
+    display: flex;
+    align-items: center;
+}
+
+cpsto bl ft act i {
+    height: 22px;
+    width: 22px;
+}
+
+
+cpsto > bl > ft > btns {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: center;
+    border-top: 1px solid var(--bc);
+    padding-top: 20px;
+    margin: 7px 0px 0px;
+}
+
+
+
+
+cpsto btns btn  i  {
+    height: 20px;
+    width:20px;
+    margin-right: 10px;
+
+} 
+
+cpsto btns btn {
+    display: flex;
+    justify-content: center;
+    font-size: 0.88em;
+    font-weight: 500;
+
+}
+
+
+smenu1 grid {
+    display: grid;
+    grid-template-columns: 60px auto;
+    min-height: 30px; 
+    padding: 10px;
+}
+
+smenu1 grid h6 {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6,h7,h8,h9 {
+    margin: 0;
+} 
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--c1);
+}
+
+fto  {
+    font-size: 14px;
+    display: flex;
+
+    
+}
+
+@media screen and (min-width:1020px) {
+
+
+    home hm>d {
+        display: grid;
+        grid-template-columns: 400px auto;
+        grid-template-rows: auto 1fr 1fr;
+        height: 100vh;
+    }
+
+    home hm >d nav {
+        
+        grid-column: 1 / 3; 
+        grid-row: 1 / 2;
+    }
+
+    home hm>d smenu {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4; 
+    }
+
+    home hm>d hero {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    home hm>d areaa {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+}
+
+
+@media screen and (max-width:900px){
+    smenu {
+        display: none;
+    }
 }
