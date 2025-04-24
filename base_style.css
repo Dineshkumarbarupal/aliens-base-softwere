@@ -989,6 +989,10 @@ ccbds bl {
 
 }
 
+ccbds di svg {
+    height: 40px;
+}
+
 ccbds {
     margin: 13px;
     display: block;
@@ -1031,8 +1035,116 @@ ccbds bd bl {
 
 ccbds bd di {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 5% 90%;
     align-items: center;
     gap: 10px;
     
+}
+
+
+
+ccbds bd di p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+ccbds bd ft {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+}
+
+ccbds bd ft h6 {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+    border: solid 1px var(--bc);
+}
+
+
+@media screen and (min-width:999px) {
+
+meeting_bot areaa main grid {
+    display: grid;
+    grid-template-columns: 30% 50% ;
+}
+
+
+meeting_bot areaa main grid > :first-child{
+    grid-row: 1 / 3;
+}
+
+}
+
+@media screen and (min-width:1020px) {
+    meeting_bot areaa main .gone {
+        display: grid;
+        grid-template-columns: 80%;
+    }
+    
+}
+
+
+ccddas {
+    margin: 14px;
+    display: block;
+}
+
+ccddas > bl {
+    background: var(--b1);
+    display: block;
+    padding: 18px;
+    border-radius: 15px;
+}
+
+
+ccddas bl hd t {
+    font-size: 13px;
+}
+
+ccddas bl hd h5 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+ccddas bl bd {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+ccddas bl bd bl {
+    display: grid;
+    grid-template-columns: 15% 77%;
+    align-items: center;
+    gap: 20px;
+    background: rgb(213 249 213);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+ccddas bl bd {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+}
+@media screen and (min-width:1020px) {
+    ccddas bl bd {
+        grid-template-columns: 20% 20% 20% 20%;
+        justify-content: left;
+    }
+    
+}
+
+ccddas ft h1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    align-items: center;
 }
